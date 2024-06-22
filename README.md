@@ -49,7 +49,11 @@ This project utilizes a webcam to calculate the distance between the camera and 
 ## Section 2: About Script Files
 
     1. object_detection.py : This script uses a YOLOv5 model to perform object detection on video frames captured by the webcam. It identifies and labels the objects in each frame.
-    2. distance_speed.py : This script calculates the distance between the object and the webcam. It uses Zhang's algorithm for distance measurement, leveraging the camera matrix to obtain the focal length and                               using bounding box parameters to calculate the distance.
-    3. getcallibrimage.py : This script captures calibration images of a chessboard pattern, which are necessary for camera calibration. The captured images are used to calibrate the camera for accurate distance                              measurement.
-    4. perfcallib.py : This script performs calibration on the images stored in the calibration_images directory. It returns the camera matrix and distortion coefficients, which are essential for accurate                                distance measurement.
+    
+    2. distance_speed.py : This script calculates the distance between the object and the webcam. It uses Zhang's algorithm for distance measurement, leveraging the camera matrix to obtain the focal length and using bounding box parameters to calculate the distance.
+    
+    3. getcallibrimage.py : This script captures calibration images of a chessboard pattern, which are necessary for camera calibration. The captured images are used to calibrate the camera for accurate distance measurement.
+    
+    4. perfcallib.py : This script performs calibration on the images stored in the calibration_images directory. It returns the camera matrix and distortion coefficients, which are essential for accurate distance measurement.
+    
     5. app.py : This script sets up a Flask web server to serve the video feed from the webcam, overlaying distance calculations on detected objects.
